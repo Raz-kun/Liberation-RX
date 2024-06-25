@@ -56,4 +56,6 @@ if (!isDedicated && hasInterface) then {
 	[] spawn compileFinal preprocessFileLineNumbers "scripts\client\init_client.sqf";
 };
 
+[] execVM "addons\ROS_hitreaction\scripts\ROS_HitReaction.sqf";
+
 diag_log "--- Init stop ---";

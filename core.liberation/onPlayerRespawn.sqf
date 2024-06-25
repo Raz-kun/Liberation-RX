@@ -37,3 +37,4 @@ _unit allowDamage true;
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\spawn\player_loadout.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\spawn\redeploy_manager.sqf";
 [] spawn compileFinal preprocessFileLineNumbers "scripts\client\misc\welcome.sqf";
+player removeAllEventHandlers "HIT";
