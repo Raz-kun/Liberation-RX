@@ -4,7 +4,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
 // Weapons + Equipements (uniforme, etc..)
 (
 	"
-	getText (_x >> 'DLC') == GRLIB_mod_west &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['rhs', (configName _x), true] call F_startsWith)) &&
 	getNumber (_x >> 'scope') > 1 &&
 	([(configName _x)] call is_allowed_item)
 	"
@@ -14,7 +14,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
 // Others object (bagpack, etc..)
 (
 	"
-	getText (_x >> 'DLC') == GRLIB_mod_west &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['rhs', (configName _x), true] call F_startsWith)) &&
 	([(configName _x)] call is_allowed_item)  &&
 	((configName _x) iskindof 'Bag_Base')
 	"
@@ -24,7 +24,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
 // Glasses
 (
 	"
-	getText (_x >> 'DLC') == GRLIB_mod_west &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['rhs', (configName _x), true] call F_startsWith)) &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgGlasses" )

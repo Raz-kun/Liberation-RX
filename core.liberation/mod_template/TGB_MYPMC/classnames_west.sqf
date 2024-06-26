@@ -13,8 +13,8 @@ FOB_truck_typename = "rhsusf_M1239_M2_Deploy_socom_d";
 ammo_truck_typename = "rhsusf_M977A4_AMMO_usarmy_wd";
 repair_truck_typename = "rhsusf_M977A4_REPAIR_usarmy_wd";
 fuel_truck_typename = "rhsusf_M978A4_usarmy_wd";
-pilot_classname = "rhsusf_army_ucp_helipilot";
-crewman_classname = "rhsusf_army_ucp_crewman";
+pilot_classname = "B_BMYPMC_Pilot_01";
+crewman_classname = "B_BMYPMC_Crewman_01";
 basic_weapon_typename = "Box_Syndicate_Ammo_F";
 
 chimera_vehicle_overide = [
@@ -26,18 +26,18 @@ chimera_vehicle_overide = [
 infantry_units_west = [
 	["Alsatian_Random_F",0,0,0,GRLIB_perm_max],
 	["Fin_random_F",0,0,0,0],
-	["rhsusf_army_ucp_rifleman",1,0,0,0],
-	["rhsusf_army_ucp_medic",1,0,0,0],
-	["rhsusf_army_ucp_engineer",1,0,0,0],
-	["rhsusf_army_ucp_grenadier",1,0,0,GRLIB_perm_inf],
-	["rhsusf_army_ucp_marksman",1,0,0,GRLIB_perm_inf],
-	["rhsusf_army_ucp_maaws",1,0,0,0],
-	["rhsusf_army_ucp_machinegunner",1,0,0,GRLIB_perm_inf],
-	["rhsusf_army_ucp_sniper",1,0,0,GRLIB_perm_inf],
-	["rhsusf_army_ucp_sniper_m107",1,0,0,GRLIB_perm_log],
-	["rhsusf_army_ucp_aa",1,0,0,GRLIB_perm_log],
-	["rhsusf_army_ucp_rifleman_m590",1,0,0,GRLIB_perm_inf],
-	["rhsusf_usmc_recon_marpat_wd_rifleman_lite",1,0,0,GRLIB_perm_log],
+	["B_BMYPMC_Rifleman_01",1,0,0,0],												//Rifleman
+	["B_BMYPMC_Combat_Medic_01",1,0,0,0],											//Medic
+	["B_BMYPMC_Engineer_01",1,0,0,0],												//Engineer
+	["B_BMYPMC_Grenadier_01",1,0,0,GRLIB_perm_inf],								    //Grenadier
+	["B_BMYPMC_Marksman_01",1,0,0,GRLIB_perm_inf],									//Marksman/Sniper
+	["B_BMYPMC_Anti_Tank_01",1,0,0,0],												//AT
+	["B_BMYPMC_Heavy_Gunner_01",1,0,0,GRLIB_perm_inf],								//MG
+//	["rhsusf_army_ucp_sniper",1,0,0,GRLIB_perm_inf],
+//	["rhsusf_army_ucp_sniper_m107",1,0,0,GRLIB_perm_log],
+	["B_BMYPMC_Anti_Air_01",1,0,0,GRLIB_perm_log],									//AA
+//	["rhsusf_army_ucp_rifleman_m590",1,0,0,GRLIB_perm_inf],
+//	["rhsusf_usmc_recon_marpat_wd_rifleman_lite",1,0,0,GRLIB_perm_log],
 	[crewman_classname,1,0,0,GRLIB_perm_inf],
 	[pilot_classname,1,0,0,GRLIB_perm_log]
 ];
@@ -142,53 +142,47 @@ buildings_west = [
 ];
 
 blufor_squad_inf_light = [
-	"rhsusf_army_ucp_arb_squadleader",
-    "rhsusf_army_ucp_arb_medic",
-	"rhsusf_army_ucp_arb_autorifleman",
-    "rhsusf_army_ucp_arb_marksman",
-	"rhsusf_army_ucp_arb_maaws",
-	"rhsusf_army_ucp_arb_rifleman_m590",
-	"rhsusf_army_ucp_arb_rifleman",
-	"rhsusf_army_ucp_arb_rifleman"
+	"B_BMYPMC_Squad_Leader_01",
+    "B_BMYPMC_Combat_Medic_01",
+	"B_BMYPMC_Heavy_Gunner_01",
+    "B_BMYPMC_Marksman_01",
+	"B_BMYPMC_Anti_Tank_01",
+	"B_BMYPMC_Rifleman_01"
 ];
 blufor_squad_inf = [
-	"rhsusf_army_ucp_arb_teamleader",
-    "rhsusf_army_ucp_arb_medic",
-    "rhsusf_army_ucp_arb_sniper_m107",
-    "rhsusf_army_ucp_arb_machinegunner",
-    "rhsusf_army_ucp_arb_grenadier",
-    "rhsusf_army_ucp_arb_maaws",
-    "rhsusf_army_ucp_arb_maaws",
-	"rhsusf_army_ucp_arb_rifleman_m590",	
-	"rhsusf_army_ucp_arb_rifleman",
-	"rhsusf_army_ucp_arb_rifleman"
+	"B_BMYPMC_Squad_Leader_01",
+    "B_BMYPMC_Combat_Medic_01",
+    "B_BMYPMC_Marksman_01",
+    "B_BMYPMC_Heavy_Gunner_01",
+    "B_BMYPMC_Grenadier_01",
+    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Air_01",
+	"B_BMYPMC_Rifleman_01",	
+	"B_BMYPMC_Rifleman_01"
 ];
 blufor_squad_at = [
-	"rhsusf_army_ucp_arb_squadleader",
-    "rhsusf_army_ucp_arb_marksman",
-    "rhsusf_army_ocp_aa",
-    "rhsusf_army_ocp_arb_maaws",
-    "rhsusf_army_ocp_javelin",
-    "rhsusf_army_ocp_javelin",
-    "rhsusf_army_ocp_medic"
+	"B_BMYPMC_Squad_Leader_01",
+    "B_BMYPMC_Marksman_01",
+    "B_BMYPMC_Anti_Air_01",
+    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Combat_Medic_01"
 ];
 blufor_squad_aa = [
-	"rhsusf_army_ucp_arb_squadleader",
-    "rhsusf_army_ucp_arb_marksman",
-    "rhsusf_army_ocp_arb_maaws",
-    "rhsusf_army_ocp_aa",
-    "rhsusf_army_ocp_aa",
-    "rhsusf_army_ocp_aa",
-    "rhsusf_army_ocp_medic"
+	"B_BMYPMC_Squad_Leader_01",
+    "B_BMYPMC_Marksman_01",
+    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Air_01",
+    "B_BMYPMC_Anti_Air_01",
+    "B_BMYPMC_Combat_Medic_01"
 ];
 blufor_squad_mix = [
-	"rhsusf_army_ucp_arb_squadleader",
-    "rhsusf_army_ucp_arb_marksman",
-    "rhsusf_army_ocp_arb_maaws",
-    "rhsusf_army_ocp_aa",
-    "rhsusf_army_ocp_javelin",
-    "rhsusf_army_ucp_arb_autorifleman",
-    "rhsusf_army_ocp_medic"
+	"B_BMYPMC_Squad_Leader_01",
+    "B_BMYPMC_Marksman_01",
+    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Air_01",
+    "B_BMYPMC_Heavy_Gunner_01",
+    "B_BMYPMC_Combat_Medic_01"
 ];
 
 squads = [

@@ -4,7 +4,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
 // Weapons + Equipements (uniforme, etc..)
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west || (['Tier1_', (configName _x), true] call F_startsWith)) &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['VSM_', (configName _x), true] call F_startsWith)) &&
 	getNumber (_x >> 'scope') > 1 &&
 	([(configName _x)] call is_allowed_item)
 	"
@@ -14,7 +14,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
 // Others object (bagpack, etc..)
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west || (['Tier1_', (configName _x), true] call F_startsWith)) &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['VSM_', (configName _x), true] call F_startsWith)) &&
 	([(configName _x)] call is_allowed_item)  &&
 	((configName _x) iskindof 'Bag_Base')
 	"
@@ -24,7 +24,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
 // Glasses
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west || (['Tier1_', (configName _x), true] call F_startsWith)) &&
+	(getText (_x >> 'DLC') == GRLIB_mod_west || (['VSM_', (configName _x), true] call F_startsWith)) &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgGlasses" )
@@ -37,7 +37,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
 	(getNumber (_x >> 'type') == 256 || (getText (_x >> 'type') find '256') >= 0) &&
 	tolower (configName _x) find '_tracer' < 0 &&
 	((configName _x) select [0,4]) == 'rhs_' &&
-	((configName _x) select [0,4]) == 'Tier1_' &&
+	((configName _x) select [0,4]) == 'VSM_' &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgMagazines")

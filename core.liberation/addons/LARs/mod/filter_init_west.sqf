@@ -84,8 +84,9 @@ if (["SPE_", GRLIB_mod_west, true] call F_startsWith) then {
 if (["UFP_BLU", GRLIB_mod_west, true] call F_startsWith) then {
 	[] call compileFinal preprocessFileLineNumbers "addons\LARs\mod\filter_UFP.sqf";
 };
-// Add RHS + Tier One Weapons
+// Add RHS + Tier One Weapons + VSM
 if (["TGB_", GRLIB_mod_west, true] call F_startsWith) then {
 	[] call compileFinal preprocessFileLineNumbers "addons\LARs\mod\filter_RHS.sqf";
 	[] call compileFinal preprocessFileLineNumbers "addons\LARs\mod\filter_T1W.sqf";
+	[] call compileFinal preprocessFileLineNumbers "addons\LARs\mod\filter_VSM.sqf";
 };
