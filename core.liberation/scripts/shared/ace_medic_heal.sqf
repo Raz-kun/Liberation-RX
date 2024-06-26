@@ -28,7 +28,7 @@ while {alive _medic} do {
 
 	if (_medic != _injured) then {
 		//medic go for him
-		//hintSilent "AI medic[ACE]: moving towards wounded...";
+		hintSilent "AI medic[ACE]: moving towards wounded...";
 		if ([_medic, 80] call BIS_fnc_enemyDetected) then {_medic setUnitPos "MIDDLE"};
 		while {(_medic distance _injured > 2) && (alive _injured) && (alive _medic) && (!isNull _injured)} do {		
 			sleep 2;
@@ -39,13 +39,13 @@ while {alive _medic} do {
 	
 	if ((alive _injured) && (!isNull _injured) && (alive _medic)) then {
 		_medic allowDamage false;
-		//hintSilent "AI medic[ACE]: Healing...";
+		hintSilent "AI medic[ACE]: Healing...";
 		_medic playMove "AinvPknlMstpSnonWnonDnon_medic_1";
 		sleep 5;
 		[_injured] call ace_medical_treatment_fnc_fullHealLocal;
 		[_injured, false] call ace_medical_fnc_setUnconscious;
 		_medic allowDamage true;
-		//hintSilent "AI medic[ACE]: Done !";
+		hintSilent "AI medic[ACE]: Done !";
 	};
 	_injured = objNull;
 	_medic setUnitPos "AUTO";

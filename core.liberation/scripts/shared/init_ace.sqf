@@ -67,7 +67,7 @@ LOADOUT_fixed_price append [
     ["ace_epinephrine", 1],
     ["ace_morphine", 1],
     ["ace_packingbandage", 1],
-    ["ace_personalaidkit", 1],
+    ["ace_personalaidkit", 5],
     ["ace_surgicalkit",1]
 ];
 

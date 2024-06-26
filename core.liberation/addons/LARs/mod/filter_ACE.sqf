@@ -4,6 +4,7 @@ GRLIB_blacklisted_from_arsenal append [
 	"ace_intelitems_base",
 	"ACE_DebugPotato",
 	//"ACE_Vector",
+	"ACE_Banana",
 	"ACE_ropeBase",
 	"ACE_ItemCore",
 	"ACE_FakeMagazine",
