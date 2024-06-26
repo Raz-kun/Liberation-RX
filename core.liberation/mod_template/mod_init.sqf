@@ -29,5 +29,5 @@ GRLIB_mod_list_name = [
 	["A3_OPF_PAC", "ArmA3 CSAT Pacific"],
 	["A3_OPF_LT", "ArmA3 CSAT Light"],
 	["A3_OPF_UB", "ArmA3 CSAT Urban"],
-	["O_MYPMC", "TGB PMC"]
+	["B_MYPMC", "TGB PMC"]
 ];
