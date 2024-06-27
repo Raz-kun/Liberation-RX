@@ -1,5 +1,5 @@
 // Add Tier One Weapons
-GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
+GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1_"];
 
 // Weapons + Equipements (uniforme, etc..)
 (
@@ -36,11 +36,12 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1"];
 	getNumber (_x >> 'scope') > 1 &&
 	(getNumber (_x >> 'type') == 256 || (getText (_x >> 'type') find '256') >= 0) &&
 	tolower (configName _x) find '_tracer' < 0 &&
-	((configName _x) select [0,4]) == 'rhs_' &&
-	((configName _x) select [0,4]) == 'Tier1_' &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgMagazines")
 ) apply { GRLIB_whitelisted_from_arsenal pushback (configName _x)} ;
 
+	//((configName _x) select [0,4]) == 'rhs_' &&
+	//((configName _x) select [0,4]) == 'Tier1_' &&
+	
 //To check Tier One Magazines
