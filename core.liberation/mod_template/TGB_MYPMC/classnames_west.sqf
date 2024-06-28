@@ -41,7 +41,8 @@ infantry_units_west = [
 	["B_BMYPMC_Engineer_01",1,30,0,0],												//Engineer
 	["B_BMYPMC_Grenadier_01",1,30,0,GRLIB_perm_inf],								    //Grenadier
 	["B_BMYPMC_Marksman_01",1,30,0,GRLIB_perm_inf],									//Marksman/Sniper
-	["B_BMYPMC_Anti_Tank_01",1,40,0,0],												//AT
+	["B_BMYPMC_Anti_Tank_MAAWS_01",1,40,0,0],												//AT
+	["B_BMYPMC_Anti_Tank_Javelin_01",1,50,0,GRLIB_perm_inf],
 	["B_BMYPMC_Heavy_Gunner_01",1,30,0,GRLIB_perm_inf],								//MG
 //	["rhsusf_army_ucp_sniper",1,0,0,GRLIB_perm_inf],
 //	["rhsusf_army_ucp_sniper_m107",1,0,0,GRLIB_perm_log],
@@ -158,7 +159,7 @@ blufor_squad_inf_light = [
     "B_BMYPMC_Combat_Medic_01",
 	"B_BMYPMC_Heavy_Gunner_01",
     "B_BMYPMC_Marksman_01",
-	"B_BMYPMC_Anti_Tank_01",
+	"B_BMYPMC_Anti_Tank_MAAWS_01",
 	"B_BMYPMC_Rifleman_01"
 ];
 blufor_squad_inf = [
@@ -167,7 +168,7 @@ blufor_squad_inf = [
     "B_BMYPMC_Marksman_01",
     "B_BMYPMC_Heavy_Gunner_01",
     "B_BMYPMC_Grenadier_01",
-    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Tank_Javelin_01",
     "B_BMYPMC_Anti_Air_01",
 	"B_BMYPMC_Rifleman_01",	
 	"B_BMYPMC_Rifleman_01"
@@ -175,15 +176,15 @@ blufor_squad_inf = [
 blufor_squad_at = [
 	"B_BMYPMC_Squad_Leader_01",
     "B_BMYPMC_Marksman_01",
-    "B_BMYPMC_Anti_Air_01",
-    "B_BMYPMC_Anti_Tank_01",
-    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Tank_MAAWS_01",
+    "B_BMYPMC_Anti_Tank_Javelin_01",
+    "B_BMYPMC_Anti_Tank_MAAWS_01",
     "B_BMYPMC_Combat_Medic_01"
 ];
 blufor_squad_aa = [
 	"B_BMYPMC_Squad_Leader_01",
     "B_BMYPMC_Marksman_01",
-    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Tank_Javelin_01",
     "B_BMYPMC_Anti_Air_01",
     "B_BMYPMC_Anti_Air_01",
     "B_BMYPMC_Combat_Medic_01"
@@ -191,9 +192,12 @@ blufor_squad_aa = [
 blufor_squad_mix = [
 	"B_BMYPMC_Squad_Leader_01",
     "B_BMYPMC_Marksman_01",
-    "B_BMYPMC_Anti_Tank_01",
+    "B_BMYPMC_Anti_Tank_Javelin_01",
+	"B_BMYPMC_Anti_Tank_MAAWS_01",
     "B_BMYPMC_Anti_Air_01",
     "B_BMYPMC_Heavy_Gunner_01",
+	"B_BMYPMC_Engineer_01",
+	"B_BMYPMC_Grenadier_01",
     "B_BMYPMC_Combat_Medic_01"
 ];
 
