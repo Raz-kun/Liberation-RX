@@ -16,9 +16,19 @@ fuel_truck_typename = "rhsusf_M978A4_usarmy_wd";
 pilot_classname = "B_BMYPMC_Pilot_01";
 crewman_classname = "B_BMYPMC_Crewman_01";
 basic_weapon_typename = "Box_Syndicate_Ammo_F";
+Box_Weapon_typename = "B_MYPMC_WeaponsBox";
+Box_Ammo_typename = "B_MYPMC_AmmoBox";
+Box_Support_typename = "B_MYPMC_ItemBox";
+Box_Launcher_typename = "B_MYPMC_LaunchersBox";
+Box_Special_typename = "";
+Box_Explosives_typename = "B_MYPMC_Demobox";
+Box_Grenades_typename = "";
+Box_Equipment_typename = "";
+medicalbox_typename = "B_MYPMC_MedicalBox";
 
+//This replace the Main HQ Heli
 chimera_vehicle_overide = [
-  ["B_Heli_Light_01_F", "RHS_MELB_MH6M"],	//This replace the Main HQ Heli
+  ["B_Heli_Light_01_F", "RHS_MELB_MH6M"],	
   ["B_Heli_Transport_01_F", "RHS_UH60M2"]
 ];
 
@@ -26,20 +36,20 @@ chimera_vehicle_overide = [
 infantry_units_west = [
 	["Alsatian_Random_F",0,0,0,GRLIB_perm_max],
 	["Fin_random_F",0,0,0,0],
-	["B_BMYPMC_Rifleman_01",1,0,0,0],												//Rifleman
-	["B_BMYPMC_Combat_Medic_01",1,0,0,0],											//Medic
-	["B_BMYPMC_Engineer_01",1,0,0,0],												//Engineer
-	["B_BMYPMC_Grenadier_01",1,0,0,GRLIB_perm_inf],								    //Grenadier
-	["B_BMYPMC_Marksman_01",1,0,0,GRLIB_perm_inf],									//Marksman/Sniper
-	["B_BMYPMC_Anti_Tank_01",1,0,0,0],												//AT
-	["B_BMYPMC_Heavy_Gunner_01",1,0,0,GRLIB_perm_inf],								//MG
+	["B_BMYPMC_Rifleman_01",1,20,0,0],												//Rifleman
+	["B_BMYPMC_Combat_Medic_01",1,30,0,0],											//Medic
+	["B_BMYPMC_Engineer_01",1,30,0,0],												//Engineer
+	["B_BMYPMC_Grenadier_01",1,30,0,GRLIB_perm_inf],								    //Grenadier
+	["B_BMYPMC_Marksman_01",1,30,0,GRLIB_perm_inf],									//Marksman/Sniper
+	["B_BMYPMC_Anti_Tank_01",1,40,0,0],												//AT
+	["B_BMYPMC_Heavy_Gunner_01",1,30,0,GRLIB_perm_inf],								//MG
 //	["rhsusf_army_ucp_sniper",1,0,0,GRLIB_perm_inf],
 //	["rhsusf_army_ucp_sniper_m107",1,0,0,GRLIB_perm_log],
-	["B_BMYPMC_Anti_Air_01",1,0,0,GRLIB_perm_log],									//AA
+	["B_BMYPMC_Anti_Air_01",1,40,0,GRLIB_perm_log],									//AA
 //	["rhsusf_army_ucp_rifleman_m590",1,0,0,GRLIB_perm_inf],
 //	["rhsusf_usmc_recon_marpat_wd_rifleman_lite",1,0,0,GRLIB_perm_log],
-	[crewman_classname,1,0,0,GRLIB_perm_inf],
-	[pilot_classname,1,0,0,GRLIB_perm_log]
+	[crewman_classname,1,50,0,GRLIB_perm_inf],
+	[pilot_classname,1,50,0,GRLIB_perm_log]
 ];
 
 units_loadout_overide = [
@@ -54,6 +64,7 @@ light_vehicles = [
 	["rhsusf_m1025_w",1,10,5,0],
 	["rhsusf_m1025_w_m2",1,50,5,GRLIB_perm_inf],
 	["rhsusf_m1025_w_mk19",1,50,5,GRLIB_perm_log],
+	["B_T_Truck_01_flatbed_F",1,15,7,0],
 	["rhsusf_M1078A1P2_WD_fmtv_usarmy",1,15,7,0],
 	["rhsusf_M1083A1P2_B_WD_fmtv_usarmy",5,30,10,GRLIB_perm_inf],
 	["rhsusf_M1078A1P2_B_M2_WD_fmtv_usarmy",5,80,10,GRLIB_perm_log],
@@ -84,7 +95,7 @@ heavy_vehicles = [
 ];
 
 air_vehicles = [
-	["RHS_MELB_MH6M",10,20,15,GRLIB_perm_tank],
+	["RHS_MELB_MH6M",10,30,15,GRLIB_perm_tank],
 	["RHS_MELB_AH6M",10,50,15,GRLIB_perm_air],
 	["RHS_UH1Y_UNARMED",10,100,5,GRLIB_perm_tank],
 	["RHS_UH1Y",10,150,5,GRLIB_perm_air],
@@ -130,6 +141,7 @@ static_vehicles_AI = [
 ];
 
 support_vehicles_west = [
+	
 	["rhsusf_M978A4_usarmy_wd",5,150,20,GRLIB_perm_inf],
 	["rhsusf_launcher_crate",0,150,0,GRLIB_perm_tank]
 ];
@@ -199,6 +211,7 @@ uavs_west = [
 
 // Everything the AI troups should be able to resupply from
 ai_resupply_sources_west = [
+	"B_MYPMC_AmmoBox"
 ];
 
 // Everything the AI troups should be able to healing from
