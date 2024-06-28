@@ -139,6 +139,7 @@ whitelisted_from_arsenal = [
     "ACE_VectorDay",                                                // Vector 21
     "ACE_VMH3",                                                     // VMH3
     "ACE_VMM3",                                                     // VMM3
-    "ACE_wirecutter"                                                // Wirecutter
+    "ACE_wirecutter",                                                // Wirecutter
     //"ACE_Yardage450"                                               // Yardage 450
+	"slr_slingload_CargoSling"
 ];
