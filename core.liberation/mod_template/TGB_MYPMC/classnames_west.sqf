@@ -215,7 +215,6 @@ uavs_west = [
 
 // Everything the AI troups should be able to resupply from
 ai_resupply_sources_west = [
-	"B_MYPMC_AmmoBox"
 ];
 
 // Everything the AI troups should be able to healing from
