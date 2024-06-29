@@ -24,7 +24,7 @@ Box_Special_typename = "";
 Box_Explosives_typename = "B_MYPMC_Demobox";
 Box_Grenades_typename = "";
 Box_Equipment_typename = "";
-//medicalbox_typename = "B_MYPMC_MedicalBox";
+medicalbox_typename = "B_MYPMC_MedicalBox";
 
 //This replace the Main HQ Heli
 chimera_vehicle_overide = [
