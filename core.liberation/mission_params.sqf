@@ -32,8 +32,7 @@ LRX_Mission_Params = [
 	["Unitcap", 0.5],					// Maximum amount AI units - [default 1] - values = [0.5,0.75,1,1.25,1.5,2] - Text {50%,%75,%100,%125,%150,%200}
 	["Difficulty", 1],				// Difficulty - [default 1] - values = [0.5,0.75,1,1.25,1.5,2,4,10] - Text {Tourist,Easy,Normal,Moderate,Hard,Extreme,Ludicrous,Oh god oh god we are all going to die}
 	["Aggressivity",1],				// CSAT aggression - [default 1] - values = [0.25,0.5,1,2,4] - Text {Anemic,Weak,Normal,Strong,Extreme}
-	["SectorRadius", 0],			// The size of the sector - [default 0] - values = {0,300,400,500,600,700,800,900,1000,1200,1500};
-	["SectorDespawn", 72], 			// Time for a sector to Despawn if no attackers - [default 72] - values = [(3*12), (6*12), (8*12), (12*12), (16*12), (20*12)]
+	["VictoryCondition", 0],		// Select the Victory condition - [default 0] - values = [0,1,2,3,4...] -
 	["HideOpfor", 1],				// Hide Opfor marker - [default 1] - values = [1,0] - Text {Enabled,Disabled}
 	["ShowBlufor", 2],				// Hide Blufor marker - [default 1] - values = [0,1,2] - Text {Disabled,"player only",Enabled}
 	["DayDuration", 1],				// Day duration (multiplier) - [default 1] - values = [0.25, 0.5, 1, 1.5, 2, 2.5, 3, 5, 10, 20, 30, 60]
@@ -80,6 +79,9 @@ LRX_Mission_Params = [
 	["AirSupport", 1],				// Enable Air Support - [default 1] - values = [1,0] - Text {Enabled,Disabled}
 	["EnableLock", 0],				// Enable Vehicles Ownership - [default 1] - values = [1,0] - Text {Enabled,Disabled}
 	["EnemyLock", 1],				// Enemy Vehicles Ownership - [default 1] - values = [1,0] - Text {Enabled,Disabled}
+	["SectorRadius", 0],			// The size of the sector - [default 0] - values = {0,300,400,500,600,700,800,900,1000,1200,1500};
+	["SectorDespawn", 72], 			// Time for a sector to Despawn if no attackers - [default 72] - values = [(3*12), (6*12), (8*12), (12*12), (16*12), (20*12)]
+	["BuildingRatio", 1],			// AI in Building ratio (CQB) - [default 1] - values = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
 	["CleanupVehicles", 1800],		// Cleanup abandoned vehicles outside FOBs - values = {0,900,1800,3600,7200,14400}
 	["AutoSave", 900],				// LRX Game Auto Save Delay - values = {0,900,1800,3600,7200}
 	["TFRadioRange", 5000],			// The radius of TFAR relay - [default 5000] - values = {2500, 5000, 7500, 10000, 15000, 20000};
@@ -108,7 +110,7 @@ LRX_Mission_Params_Def = [
 		"Friendly",
 		"Enemy"
 		]
-	],	
+	],
 	["Unitcap", localize "STR_PARAMS_UNITCAP", [
 		localize "STR_PARAMS_UNITCAP1",
 		localize "STR_PARAMS_UNITCAP2",
@@ -155,6 +157,10 @@ LRX_Mission_Params_Def = [
 		["0.25", "0.5", "1", "1.5", "2", "2.5", "3", "5", "7", "10", "20", "30", "40", "50"],
 		[0.25, 0.5, 1, 1.5, 2, 2.5, 3, 5, 7, 10, 20, 30, 40, 50]
 	],
+	["BuildingRatio", localize "STR_PARAMS_BUILDING_RATIO",
+		["0.5", "1", "1.5", "2", "2.5", "3"],
+		[0.5, 1, 1.5, 2, 2.5, 3]
+	],
 	["FilterArsenal", localize "STR_LIMIT_ARSENAL", [
 		localize "STR_PARAMS_DISABLED",
 		localize "STR_LIMIT_ARSENAL_PARAM1",
@@ -169,6 +175,15 @@ LRX_Mission_Params_Def = [
 		localize "STR_WEATHER_PARAM2",
 		localize "STR_WEATHER_PARAM3",
 		localize "STR_WEATHER_PARAM4"
+		]
+	],
+	["VictoryCondition", localize "STR_VICTORY_CONDITION", [
+		localize "STR_VICTORY_COND0",		
+		localize "STR_VICTORY_COND1",
+		localize "STR_VICTORY_COND2",
+		localize "STR_VICTORY_COND3",
+		localize "STR_VICTORY_COND4",
+		localize "STR_VICTORY_COND5"
 		]
 	],
 	["ResourcesMultiplier", localize "STR_PARAMS_RESOURCESMULTIPLIER",
@@ -191,7 +206,7 @@ LRX_Mission_Params_Def = [
 		[100, 200, 300, 400, 500, 600]
 	],
 	["PAR_Grave", localize "STR_PARAMS_PAR_GRAVE", [localize "STR_PARAMS_DISABLED",localize "STR_PARAMS_ENABLED"]],
-	
+
 	["Respawn", localize "STR_RESPAWN",
 		["5", "10", "20", "25", "30", "60"],
 		[5, 10, 20, 25, 30, 60]

@@ -33,6 +33,7 @@ if (lifeState _medic == "INCAPACITATED" || (!alive _wnded)) exitWith { [_medic, 
 // Revived
 if (PAR_revive == 2) then {
 	_medic removeItem PAR_AidKit;
+
 };
 
 if (PAR_ai_revive > 0 && !isPlayer _wnded && local _wnded) then {

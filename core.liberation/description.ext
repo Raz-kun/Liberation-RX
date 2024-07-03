@@ -43,7 +43,7 @@ class cfgSounds {
  		sound[] = {"res\c130.ogg", 1, 1};
 		titles[] = {"parasound"};
  	};
-	
+
 	#include "\addons\ROS_hitreaction\ROS_sounds.hpp"
 };
 

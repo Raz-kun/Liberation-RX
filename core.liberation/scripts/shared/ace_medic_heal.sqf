@@ -40,6 +40,7 @@ while {alive _medic} do {
 	if ((alive _injured) && (!isNull _injured) && (alive _medic)) then {
 		_medic allowDamage false;
 		_medic groupChat format["Healing %1", (name _injured)];
+
 		_medic playMove "AinvPknlMstpSnonWnonDnon_medic_1";
 		sleep 5;
 		[_injured] call ace_medical_treatment_fnc_fullHealLocal;
