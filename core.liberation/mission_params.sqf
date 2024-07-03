@@ -29,7 +29,7 @@ LRX_Mission_Params = [
 	["PlatoonView",0],				// UI - Show Platoon Overlay
 	["NameTags",0],					// UI - Show player name tags
 	["MapMarkers",1],				// UI - Show team mates on map
-	["Unitcap", 1],					// Maximum amount AI units - [default 1] - values = [0.5,0.75,1,1.25,1.5,2] - Text {50%,%75,%100,%125,%150,%200}
+	["Unitcap", 0.5],					// Maximum amount AI units - [default 1] - values = [0.5,0.75,1,1.25,1.5,2] - Text {50%,%75,%100,%125,%150,%200}
 	["Difficulty", 1],				// Difficulty - [default 1] - values = [0.5,0.75,1,1.25,1.5,2,4,10] - Text {Tourist,Easy,Normal,Moderate,Hard,Extreme,Ludicrous,Oh god oh god we are all going to die}
 	["Aggressivity",1],				// CSAT aggression - [default 1] - values = [0.25,0.5,1,2,4] - Text {Anemic,Weak,Normal,Strong,Extreme}
 	["VictoryCondition", 0],		// Select the Victory condition - [default 0] - values = [0,1,2,3,4...] -
@@ -45,13 +45,8 @@ LRX_Mission_Params = [
 	["ModPresetWest", 0],			// Select MOD Preset for Friendly - value = computed
 	["ModPresetEast", 0],			// Select MOD Preset for Enemy - values = computed
 	["ModPresetCiv", 1],			// Select MOD Preset for Civilian - values = "All", "Friendly", "Enemy"
-<<<<<<< HEAD
 	["ModPresetTaxi", 1],			// Select MOD Preset for Taxi - values = "All", "Friendly", "Enemy"	
 	["Weather", 4],					// Weather - [default 4] - values = [1,2,3,4] - Text {Always Sunny,Random without rain,Random Cloudy,Random}
-=======
-	["ModPresetTaxi", 1],			// Select MOD Preset for Taxi - values = "All", "Friendly", "Enemy"
-	["Weather", 1],					// Weather - [default 4] - values = [1,2,3,4] - Text {Always Sunny,Random without rain,Random Cloudy,Random}
->>>>>>> 34494b551f394df26d33d2c1f4c7b99e4afeb5d7
 	["Fatigue", 0],					// Stamina - [default 1] - values = [1,0] - Text {Enabled,Disabled}
 	["PAR_Revive", 2],				// PAR revive - [default 3] - values = [3,2,1,0] - Text {Enabled - Everyone can revive,Enabled - Everyone can revive using Medikit/FAK,Enabled - Only medics can revive,Disabled}
 	["PAR_AI_Revive", 5],			// PAR AI revive limit - [default 0] - values = [0,3,5,7,10,15,20]
@@ -62,7 +57,7 @@ LRX_Mission_Params = [
 	["MaxSquadSize", 5],			// AI recruitment limit per squad [default 5] - values = {0,1,2,3,4,5,6,7,8,9,10}
 	["MaxGarageSize", 6],			// Virtual Garage vehicle limit [default 6] - values = {0,1,2,3,4,5,6,7,8,9,10}
 	["MaxSpawnPoint", 3],			// Spawn Point limit per player. [default 3] - values = {1,2,3,4}
-	["TK_mode", 2],					// Teamkill Mode [default 0] - values = [0,1,2] - Text {Strict,Relax,Disabled}
+	["TK_mode", 0],					// Teamkill Mode [default 0] - values = [0,1,2] - Text {Strict,Relax,Disabled}
 	["TK_count", 5],				// Teamkill Warning Count [default 4] - values = [3, 4, 5, 6, 7, 8, 9, 10] - Text {3, 4, 5, 6, 7, 8, 9, 10}
 	["Civilians", 1],				// Cilivilian Manager - [default 1] - values = [0,0.5,1,2] - Text {None,Reduced,Normal,Increased}
 	["CivPenalties", 1],			// Enable Civilian Penalty [default 1] - values = [1,0] - Text {Enabled,Disabled}

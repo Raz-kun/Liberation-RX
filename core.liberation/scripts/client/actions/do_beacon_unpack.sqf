@@ -6,11 +6,15 @@ if ( _tent_cost > (infantry_cap - resources_infantry)) then {
 	hintSilent format [localize "STR_BEACON_UNPACK", resources_infantry];
 } else {
 	disableUserInput true;
-	player switchMove "AinvPknlMstpSlayWnonDnon_medic";
-	player playMoveNow "AinvPknlMstpSlayWnonDnon_medic";
+	player playMove"AmovPknlMstpSrasWrflDnon";
+	sleep 1;
+	player switchMove "Acts_carFixingWheel";
+	player playMoveNow "Acts_carFixingWheel";
 	sleep 2;
 	removeBackpack player;
-	sleep 6;
+	sleep 5;
+	player switchMove "AmovPknlMstpSrasWrflDnon";
+	player playMoveNow "AmovPknlMstpSrasWrflDnon";
 	buildtype = 9;
 	build_unit = [mobile_respawn,[],1,[],[],[],[]];
 	dobuild = 1;

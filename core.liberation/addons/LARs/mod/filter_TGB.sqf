@@ -1,20 +1,21 @@
-// Add RHS Weapons
-GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
+// Add TGB PMC Gears
 
-// Weapons + Equipements (uniforme, etc..)
+GRLIB_MOD_signature = GRLIB_MOD_signature + ["Tier1_","VSM_","USP_"];
+
+// Weapons + Equipements (uniforms, etc..)
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west) &&
+	([(configName _x), GRLIB_MOD_signature] call F_startsWithMultiple) &&
 	getNumber (_x >> 'scope') > 1 &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgWeapons" )
 ) apply { GRLIB_whitelisted_from_arsenal pushback (configName _x) } ;
 
-// Others object (bagpack, etc..)
+// Others object (backpack, etc..)
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west) &&
+	([(configName _x), GRLIB_MOD_signature] call F_startsWithMultiple) &&
 	([(configName _x)] call is_allowed_item) &&
 	((configName _x) iskindof 'Bag_Base')
 	"
@@ -24,7 +25,7 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
 // Glasses
 (
 	"
-	(getText (_x >> 'DLC') == GRLIB_mod_west) &&
+	([(configName _x), GRLIB_MOD_signature] call F_startsWithMultiple) &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgGlasses" )
@@ -36,10 +37,8 @@ GRLIB_MOD_signature = GRLIB_MOD_signature + ["rhs"];
 	getNumber (_x >> 'scope') > 1 &&
 	(getNumber (_x >> 'type') == 256 || (getText (_x >> 'type') find '256') >= 0) &&
 	tolower (configName _x) find '_tracer' < 0 &&
-	((configName _x) select [0,3]) == 'rhs' &&
+	([(configName _x), GRLIB_MOD_signature] call F_startsWithMultiple) &&
 	([(configName _x)] call is_allowed_item)
 	"
 	configClasses (configfile >> "CfgMagazines")
 ) apply { GRLIB_whitelisted_from_arsenal pushback (configName _x)} ;
-
-// || (['rhs', (configName _x), true] call F_startsWith)

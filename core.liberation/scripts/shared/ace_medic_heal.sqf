@@ -7,10 +7,10 @@ private _units = units _medic;
 
 while {alive _medic} do {
 	sleep 5;
-	// waaiting for wounded
+	// waiting for wounded
 	while {(isNull _injured) && (alive _medic)} do {
 		if (_medic getvariable ["ACE_isUnconscious", false]) then {
-			//hintSilent "AI medic[ACE]: I am injured...wait a sec!";
+			_medic groupChat "I am injured... Wait a sec!";
 			_injured = _medic;
 		} else {
 			{
@@ -28,7 +28,7 @@ while {alive _medic} do {
 
 	if (_medic != _injured) then {
 		//medic go for him
-		hintSilent "AI medic[ACE]: moving towards wounded...";
+		_medic groupChat format["Moving towards %1",(name _injured)];
 		if ([_medic, 80] call BIS_fnc_enemyDetected) then {_medic setUnitPos "MIDDLE"};
 		while {(_medic distance _injured > 2) && (alive _injured) && (alive _medic) && (!isNull _injured)} do {		
 			sleep 2;
@@ -39,13 +39,14 @@ while {alive _medic} do {
 	
 	if ((alive _injured) && (!isNull _injured) && (alive _medic)) then {
 		_medic allowDamage false;
-		hintSilent "AI medic[ACE]: Healing...";
+		_medic groupChat format["Healing %1", (name _injured)];
+
 		_medic playMove "AinvPknlMstpSnonWnonDnon_medic_1";
 		sleep 5;
 		[_injured] call ace_medical_treatment_fnc_fullHealLocal;
 		[_injured, false] call ace_medical_fnc_setUnconscious;
 		_medic allowDamage true;
-		hintSilent "AI medic[ACE]: Done !";
+		_medic groupChat "All good soldier!";
 	};
 	_injured = objNull;
 	_medic setUnitPos "AUTO";
