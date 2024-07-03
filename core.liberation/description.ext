@@ -44,7 +44,7 @@ class cfgSounds {
 		titles[] = {"parasound"};
  	};
 
-	#include "\addons\ROS_hitreaction\ROS_sounds.hpp"
+	#include "addons\ROS_hitreaction\ROS_sounds.hpp"
 };
 
 class CfgDebriefing {
