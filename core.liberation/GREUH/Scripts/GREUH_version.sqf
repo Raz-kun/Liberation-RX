@@ -55,7 +55,7 @@ player createDiaryRecord ["LRX Info", ["Contributors", format ["Nuke Script v1.0
 player createDiaryRecord ["LRX Info", ["Contributors", format ["Advanced Rappelling v1.00<br/>by <font color='%1'>-Seth Duda-</font>", call _getRandomColor]]];
 player createDiaryRecord ["LRX Info", ["Contributors", format ["Vehicle Appearance Manager v1.41<br/>by <font color='%1'>-UNIT_normal-</font>", call _getRandomColor]]];
 player createDiaryRecord ["LRX Info", ["Contributors", format ["DALE Pylons v1.00<br/>by <font color='%1'>-Sgt. Dennenboom-</font>", call _getRandomColor]]];
-player createDiaryRecord ["LRX Info", ["Contributors", format ["Dynamic Animal v.1.00<br/>by <font color='%1'>-Vandeanson-</font>", call _getRandomColor]]];
+player createDiaryRecord ["LRX Info", ["Contributors", format ["Wild Life Manager v1.8<br/>by <font color='%1'>-pSiKO-</font>", call _getRandomColor]]];
 player createDiaryRecord ["LRX Info", ["Contributors", format ["Mag Repack v3.13<br/>by <font color='%1'>-Outlawled-</font>", call _getRandomColor]]];
 player createDiaryRecord ["LRX Info", ["Contributors", format ["A3W Missions and so much!!<br/>by <font color='%1'>-AgentRev-</font>", call _getRandomColor]]];
 player createDiaryRecord ["LRX Info", ["Contributors", format ["R3F Logistics v3.10<br/>by <font color='%1'>-Team-R3F.org-</font>", call _getRandomColor]]];
@@ -67,26 +67,30 @@ player createDiaryRecord ["LRX Info", ["Contributors", format ["LRX Community Ma
 player createDiaryRecord ["LRX Info", ["Contributors", localize "STR_MISSION_TITLE"]];
 player createDiarySubject ["LRX Info", "Settings"];
 private _diary = [];
+private ["_name", "_value_text"];
 {
 	_name = _x select 0;
-	_data = [_name] call lrx_getParamData;
-	_value_text = "Error!";
-	if (count _data > 0) then {
-		_name = _data select 0;
-		_values_raw = _data select 2;
-		if (isNil "_values_raw") then { _values_raw = [] };
-		if (count (_values_raw) > 0) then {
-			_value_text = (_data select 1) select (_values_raw find (_x select 1));
-		} else {
-			_value_text = (_data select 1) select (_x select 1);
+	if (_name == "---") then {
+		_diary pushBack format ["%1 <font color='#0080f0'>%2</font> %1", _name, (_x select 1)];
+	} else {
+		_value_text = "Error!";
+		_data = [_name] call lrx_getParamData;
+		if (count _data > 0) then {
+			_name = _data select 0;
+			_values_raw = _data select 2;
+			if (isNil "_values_raw") then { _values_raw = [] };
+			if (count (_values_raw) > 0) then {
+				_value_text = (_data select 1) select (_values_raw find (_x select 1));
+			} else {
+				_value_text = (_data select 1) select (_x select 1);
+			};		
 		};
+		_diary pushBack format ["%1: <font color='#ff8000'>%2</font>", _name, _value_text];
 	};
-	_diary pushBack format ["%1: <font color='#ff8000'>%2</font>", _name, _value_text];
+	
 } foreach GRLIB_LRX_params;
 reverse _diary;
-{
-	player createDiaryRecord ["LRX Info", ["Settings", _x]];
-} forEach _diary;
+{ player createDiaryRecord ["LRX Info", ["Settings", _x]] } forEach _diary;
 player createDiaryRecord ["LRX Info", ["Settings", format ["Game ID: <font color='#ff8000'>%1</font>", GRLIB_game_ID]]];
 player createDiaryRecord ["LRX Info", ["Settings", format ["Build Version: <font color='#ff8000'>%1</font>", GRLIB_build_version]]];
 player createDiaryRecord ["LRX Info", ["Settings", format ["-= LRX Current Settings =-"]]];
