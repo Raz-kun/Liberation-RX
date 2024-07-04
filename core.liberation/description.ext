@@ -16,7 +16,7 @@ loadScreen = "res\liberation.paa";
 onLoadIntro = "Welcome on the Liberaton RX planet.";
 
 respawn = 3;
-respawnButton = 1;
+respawnButton = 0;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnDelay = 5;
